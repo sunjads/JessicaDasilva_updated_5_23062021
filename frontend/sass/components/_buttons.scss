@@ -1,0 +1,232 @@
+// bouton "voir le produit"
+.button {
+  padding: 15px 15px;
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 20px;
+  background: #ffc8a1;
+  border: none;
+  color: black;
+  font-weight: bolder;
+  border-radius: 30px;
+  transition: ease-out 0.2s;
+  &:hover {
+    background: #9d63d6;
+    color: white;
+    text-decoration: none;
+  }
+}
+.button:active {
+  animation: agrandir 0.3s linear;
+}
+@keyframes agrandir {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// bouton "ajouter au panier"
+#add-button {
+  position: relative;
+  margin-top: 10px;
+  width: 250px;
+  height: 50px;
+  border: none;
+  color: black;
+  background-color: #f79a59;
+  border-radius: 30px;
+  box-shadow: insert 0 0 0 0 #9d63d6;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  font-weight: bolder;
+  outline: none;
+  &:hover {
+    box-shadow: inset 250px 0 0 0 #9d63d6;
+    color: white;
+    cursor: pointer;
+  }
+}
+//animation au clique du bouton "ajouter au panier"
+#add-button span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  font-size: 1em;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+.add-to-cart {
+  opacity: 1;
+}
+.added {
+  opacity: 0;
+}
+#add-button.clicked span.add-to-cart {
+  animation: txt1 0.5s ease-in-out forwards;
+}
+#add-button.clicked span.added {
+  animation: txt2 0.5s ease-in-out forwards;
+}
+@keyframes txt1 {
+  0% {
+    opacity: 1;
+  }
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes txt2 {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//l'icone panier sur la page produit au moment du clique "ajouter au panier"
+.selected {
+  color: #905bfd;
+
+  animation: agrandir 0.3s linear;
+}
+@keyframes agrandir {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+//bouton "vider le panier"
+#remove_all_button {
+  background-color: #f79a59;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  width: 250px;
+  height: 50px;
+  margin: auto;
+  margin-top: 15px;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  outline: none;
+  &:hover {
+    background-color: #9d63d6;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  &:active {
+    font-weight: bold;
+  }
+}
+//bouton "supprimer un produit" sur la page panier
+.btn_supprimer_article {
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgb(218, 216, 216);
+  & .fas {
+    font-size: 18px;
+    color: orangered;
+    //pour ne plus cliquer sur l'icone mais le bouton
+    pointer-events: none;
+  }
+}
+
+//bouton "valider la commande"
+#validation-commande {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  margin: auto;
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  z-index: 1;
+  background: linear-gradient(90deg, #f79a59, #9d63d6, #e67a8e, #f79a59);
+  background-size: 400%;
+  border-radius: 30px;
+  &:hover {
+    animation: animate 3s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+}
+
+#validation-commande:focus {
+  box-shadow: none;
+}
+#validation-commande:active {
+  box-shadow: none;
+  animation: agrandir 0.5s ease-in-out;
+}
+@keyframes agrandir {
+  0% {
+    transform: scale(1);
+  }
+  50%,
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#validation-commande:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #f79a59, #9d63d6, #905bfd, #f79a59);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#validation-commande:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .nav-link > img {
+    color: red;
+    width: 16px;
+    height: 15px;
+  }
+
+  .button {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 460px) and (max-width: 991px) {
+  .button {
+    width: 200px;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "projet_5_demo",
+  "version": "1.0.0",
+  "description": "essai demo du p5",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass --watch frontend/sass/main.scss:frontend/public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "bootstrap-icons": "^1.4.1"
+  }
+}

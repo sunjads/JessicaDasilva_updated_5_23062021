@@ -1,0 +1,12 @@
+#hero-section {
+  background-color: #e9dce5;
+  color: black;
+  text-align: center;
+  padding-top: 15px;
+
+  font-family: "Finger Paint", cursive;
+  & p {
+    font-family: "Noto Sans SC", sans-serif;
+    padding-top: 10px;
+  }
+}

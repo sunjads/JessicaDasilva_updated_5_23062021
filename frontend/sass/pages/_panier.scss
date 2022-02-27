@@ -1,0 +1,50 @@
+.w-75 {
+  border: rgb(172, 22, 22) 1px solid;
+  text-align: center;
+}
+
+// la div contenant le total du panier
+#total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  border: none;
+  border-top: rgb(97, 96, 96) 2px solid;
+  & strong {
+    padding: 10px 10px;
+  }
+}
+
+// le nom du produit dans le panier
+.my-0 {
+  padding-top: 10px;
+  width: 25%;
+}
+// le prix  du produit dans le panier
+.affichage_prix {
+  padding-top: 10px;
+}
+//input pour augmenter/diminuer la qtité
+.list-group-item .quantite {
+  border: rgb(223, 222, 222) 1px solid;
+  border-radius: 2px;
+  width: 15%;
+  &:focus {
+    font-weight: bolder;
+    outline: none;
+  }
+}
+
+#invalid-feedback-lastName,
+#invalid-feedback-firstName,
+#invalid-feedback-city,
+#invalid-feedback-address,
+#invalid-feedback-email {
+  color: #8f5bfe;
+  font-weight: bolder;
+}
+//titres presents sur la page panier
+.mt-3 {
+  font-weight: bold;
+  padding: 10px 0px;
+}
