@@ -32,7 +32,7 @@ function afficherCameraDansPanier(i) {
   input.setAttribute("min", "1");
   input.setAttribute(
     "onkeypress",
-    "return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
+    "return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 49 && event.charCode <= 57"
   );
 
   //Placement des éléments
