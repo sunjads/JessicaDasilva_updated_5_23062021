@@ -30,10 +30,6 @@ function afficherCameraDansPanier(i) {
   input.setAttribute("value", cart[i].quantite);
   input.setAttribute("type", "number");
   input.setAttribute("min", "1");
-  /*input.setAttribute(
-    "onkeypress",
-    "return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-  );*/
   input.setAttribute("oninput", "validity.valid||(value='');");
 
   //Placement des éléments
