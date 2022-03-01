@@ -8,6 +8,7 @@ function afficherCamera(data) {
     text = document.querySelector(".text"),
     image = document.createElement("img");
   div = document.querySelector(".container-img");
+  input = document.querySelector("input");
   selectLenses = document.querySelector("select");
 
   // Remplissage des éléments
@@ -15,6 +16,8 @@ function afficherCamera(data) {
   image.src = data.imageUrl;
   image.alt = "appareil photo vintage";
   image.setAttribute("id", "img-camera");
+  input.setAttribute("min", "1");
+  input.setAttribute("oninput", "validity.valid||(value='');");
   price.appendChild(document.createTextNode(data.price / 100 + " €"));
   text.appendChild(document.createTextNode(data.description));
   div.appendChild(image);
